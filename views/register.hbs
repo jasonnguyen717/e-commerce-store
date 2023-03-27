@@ -1,0 +1,116 @@
+{{> header}}
+{{> navbar}}
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="flexbox-container registration">
+      <div class="grid-container registration">
+        <form class="register-form" action="/register" method="POST">
+          <div class="item1-reg">  
+            <button class="inandout-btn">
+              <h1 class="register-h1 inandout">Register
+              </h1>
+            </button>
+          </div>
+          <hr class="hr-registration">
+          <div id="reg-error"> {{{ errors}}} 
+          </div>
+          <div class="item2-reg">
+            <div class="flexbox-container registration-row1">
+              <div class="flexbox-item registration-r1-1">
+                <label for="fname">First Name*
+                </label>
+              </div>
+              <div class="flexbox-item registration-r1-2">
+                <input type="text" id="fname" autofocus required placeholder="First Name"> 
+              </div>
+              <div class="flexbox-item registration-r1-3">
+                <label for="lname">Last Name*
+                </label>
+              </div>
+              <div class="flexbox-item registration-r1-4">
+                <input type="text" id="lname" required placeholder="Last Name">
+              </div>
+            </div>
+          </div>
+          <div class="item3-reg">
+            <div class="flexbox-container registration-row2">
+              <div class="flexbox-item registration-r2-1">
+                <label for="emaddr">Email Address*
+                </label>
+              </div>
+              <div class="flexbox-item registration-r2-2">
+                <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email" required placeholder="Email">
+              </div>
+              <div class="flexbox-item registration-r2-3">
+                <label for="tel">Phone number*
+                </label>
+              </div>
+              <div class="flexbox-item registration-r2-4">
+                <input type="text" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" id="tel" required placeholder="ten digits">
+              </div>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="item4-reg">   
+            <div class="flexbox-container registration-row3">
+              <div class="flexbox-item registration-r3-1">
+                <label for="uname">Username*
+                </label>
+              </div>
+              <div class="flexbox-item registration-r3-2">
+                <input type="text" id="username" name="username" required placeholder="Username">
+              </div>
+              <div class="flexbox-item registration-r3-3">
+              </div>
+              <div class="flexbox-item registration-r3-4">
+              </div>
+            </div>
+          </div>
+          <div class="item5-reg"> 
+            <div class="flexbox-container registration-row4">
+              <div class="flexbox-item registration-r4-1">
+                <label for="password">Password*
+                </label>
+              </div>
+              <div class="flexbox-item registration-r4-2">
+                <input type="password" id="password" name="password"required placeholder="Password">
+              </div>
+              <div class="flexbox-item registration-r4-3">
+                <label for="pword2">Confirm Password*
+                </label>
+              </div>
+              <div class="flexbox-item registration-r4-4">
+                <input type="password" id="pword2" name="pword2" required placeholder="Password">
+              </div>
+            </div>
+          </div>
+          <div class="item6-reg"> 
+            <div class="flexbox-container registration-row5">
+              <div class="flexbox-item registration-r5-1">
+                <input type="checkbox" id="terms" required> 
+                <div id="termsAndCond">Accept Terms and Conditions
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item7-reg"> 
+            <div class="flexbox-container registration-row6">
+              <div class="flexbox-item registration-r6-1">
+                <button class="register-btn" type="submit">Register
+                </button>
+              </div>
+              <ul class="regSuccess">
+                {{registered}}{{usernameInUse}}
+              </ul>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    {{> footer}}
+

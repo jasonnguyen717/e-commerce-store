@@ -1,0 +1,213 @@
+{{> header}}
+{{> navbar}}
+      <br><br><br><br><br>
+       <div class="flexbox-container payment">
+           <div class="grid-container payment">
+               <form class="register-form">
+                 <div class="item1-pay">  
+                    <h1 class="payment-h1">Billing Information</h1>
+                 </div>
+
+                 <hr class="hr-payment">
+
+                  <div class="item2-pay">
+                      <div class="flexbox-container payment-row1">
+
+                          <div class="flexbox-item payment-r1-1">
+                              <label for="fname">First Name*</label>
+                          </div>
+
+                          <div class="flexbox-item payment-r1-2">
+                              <input type="text" id="fname" required placeholder="First Name"> 
+                          </div>
+
+                          <div class="flexbox-item payment-r1-3">
+                             <label for="lname">Last Name*</label>
+                          </div>
+
+                          <div class="flexbox-item payment-r1-4">
+                             <input type="text" id="lname" required placeholder="Last Name">
+                          </div>
+                      </div>
+                  </div>
+                   
+                  <div class="item3-pay">
+                       <div class="flexbox-container payment-row2">
+
+                           <div class="flexbox-item payment-r2-1">
+                               <label for="emaddr">Email Address*</label>
+                           </div>
+
+                           <div class="flexbox-item payment-r2-2">
+                               <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="emaddr" required placeholder="Email">
+                           </div>
+
+                           <div class="flexbox-item payment-r2-3">
+                              <label for="tel">Phone number*</label>
+                           </div>
+
+                           <div class="flexbox-item payment-r2-4">
+                              <input type="text" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" id="tel" required placeholder="ten digits">
+                           </div>
+                      </div>
+                  </div>
+
+                  <br><br>
+
+                  <div class="item4-pay">   
+                      <div class="flexbox-container payment-row3">
+
+                          <div class="flexbox-item payment-r3-1">
+                              <label for="addr">Address*</label>
+                          </div>
+
+                          <div class="flexbox-item payment-r3-2">
+                              <input type="text" id="addr" required placeholder="Address">
+                          </div>
+
+                          <div class="flexbox-item payment-r3-3">
+                          </div>
+
+                          <div class="flexbox-item payment-r3-4">
+                          </div>
+                      </div>
+                  </div>
+
+                  
+
+                  <div class="item5-pay"> 
+                      <div class="flexbox-container payment-row4">
+
+                          <div class="flexbox-item payment-r4-1">
+                              <label for="state">State*</label>
+                          </div>
+
+                          <div class="flexbox-item payment-r4-2">
+                              <input type="text" id="state" minlength="2" maxlength="2" required placeholder="CA">
+                          </div>
+
+                          <div class="flexbox-item payment-r4-3">
+                              <label for="zip">Zip code*</label>
+                          </div>
+
+                          <div class="flexbox-item payment-r4-4">
+                            <input id="zip" name="zip" type="text" required inputmode="numeric" minlength="3" maxlength="10">
+                          </div>
+                      </div>
+                  </div>
+
+                  <hr class="hr-payment">
+
+                  <div class="item6-pay"> 
+
+                        <h1 class="payment-h5">Payment</h1>
+                     
+                  </div>
+
+                  <hr class="hr-payment">
+
+                  <div class="item7-pay">
+                    <div class="flexbox-container payment-row6">
+
+                        <div class="flexbox-item payment-r6-1">
+                            <label for="fname">Name on card*</label>
+                        </div>
+
+                        <div class="flexbox-item payment-r6-2">
+                            <input type="text" id="fname" required placeholder="Full name"> 
+                        </div>
+
+                        <div class="flexbox-item payment-r6-3">
+                           
+                        </div>
+
+                        <div class="flexbox-item payment-r6-4">
+                           
+                        </div>
+                    </div>
+                </div>
+                 
+                <div class="item8-pay">
+                     <div class="flexbox-container payment-row7">
+
+                         <div class="flexbox-item payment-r7-1">
+                             <label for="cnumber">Card Number*</label>
+                         </div>
+
+                         <div class="flexbox-item payment-r7-2">
+                            <input type="text" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" id="cnumber" required placeholder="1111-2222-3333-4444">
+                         </div>
+
+                         <div class="flexbox-item payment-r7-3">
+                           
+                         </div>
+
+                         <div class="flexbox-item payment-r7-4">
+                            
+                         </div>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <div class="item9-pay">   
+                    <div class="flexbox-container payment-row8">
+
+                        <div class="flexbox-item payment-r8-1">
+                            <label for="expMonth">Exp Month*</label>
+                        </div>
+
+                        <div class="flexbox-item payment-r8-2">
+                            <input type="text" id="expMonth" required placeholder="January">
+                        </div>
+
+                        <div class="flexbox-item payment-r8-3">
+                        </div>
+
+                        <div class="flexbox-item payment-r8-4">
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <div class="item10-pay"> 
+                    <div class="flexbox-container payment-row9">
+
+                        <div class="flexbox-item payment-r9-1">
+                            <label for="expYear">Exp Year*</label>
+                        </div>
+
+                        <div class="flexbox-item payment-r9-2">
+                            <input type="text" id="expYear"  pattern="[0-9]{2}" maxlength="2" required placeholder="22">
+                        </div>
+
+                        <div class="flexbox-item payment-r9-3">
+                            <label for="cvv">CVV*</label>
+                        </div>
+
+                        <div class="flexbox-item payment-r9-4">
+                          <input id="cvv" type="text" pattern="[0-9]{3}" maxlength="3" required placeholder="123">
+                        </div>
+                    </div>
+                </div>
+
+                <label>
+                    <input type="checkbox" class="remember-padding" checked="checked" name="sameadr"> Shipping address same as billing
+                  </label>
+
+
+                  <div class="item11-pay"> 
+                      <div class="flexbox-container payment-row10">
+
+                          <div class="flexbox-item payment-r10-1">
+                              <button class="payment-btn" type="submit">Submit</button>
+                          </div>
+                      </div>
+                  </div>
+
+              </form>
+           </div>
+       </div>
+       
+      {{> footer}}

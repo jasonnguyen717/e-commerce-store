@@ -1,0 +1,311 @@
+{{> header}}
+{{> navbar}}
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class='containerContainer'>
+  <div class='cart-container'>
+    <h1 class='heading-cart'>Shopping Cart
+    </h1>
+
+    <form method='POST' action='/cart/removeall'>
+      <input type='hidden' name='' value='' />
+      <button class='remove-all' type='submit'>
+        <h5 class='remove-all'>clear cart</h5>
+      </button>
+    </form>
+
+    <div class='grid-container cart'>
+      <div class='header-title'><h3>Product</h3></div>
+      <div class='header-title'><h3>Title</h3></div>
+      <div class='header-quantity'><h3>Quantity</h3></div>
+      <div class='header-price'><h3>Price</h3></div>
+      <div class='header-price'><h3>Total</h3></div>
+
+    </div>
+    {{#if data.0.title}}
+      <div class='grid-container cart'>
+
+        <img onmouseover='scaleImg(this)' onmouseout='staticImg(this)' class='cart-img' src={{data.0.image}} />
+        <div class='cart-title'>{{data.0.title}}</div>
+        <div class='cart-quantity'>
+          <form method='POST' action='/cart/updateone'>
+            <input type='hidden' name='id' value={{data.0.id}} />
+            <button type='submit' class='btn-plus'>+</button></form>
+          {{data.0.quantity}}
+          <form method='POST' action='/cart/minusone'>
+            <input type='hidden' name='id' value={{data.0.id}} />
+            <button type='submit' class='btn-minus'>-</button></form>
+
+        </div>
+        <div class='cart-price'>${{data.0.price}}</div>
+        <div class='cart-total'>${{data.0.total}}</div>
+        <div class='cart-removeitem'>
+          <form method='POST' action='/cart/removeitem'>
+            <input type='hidden' name='id' value={{data.0.id}} />
+            <button type='submit' class='cart-remove-item'>Remove Item
+            </button>
+          </form>
+        </div>
+      </div>
+
+    {{/if}}
+
+    {{#if data.1.title}}
+
+      <div class='grid-container cart'>
+        <img onmouseover='scaleImg(this)' onmouseout='staticImg(this)' class='cart-img' src={{data.1.image}} />
+        <div class='cart-title'>{{data.1.title}}</div>
+        <div class='cart-quantity'>
+          <form method='POST' action='/cart/updateone'>
+            <input type='hidden' name='id' value={{data.1.id}} />
+            <button class='btn-plus'>+</button></form>
+          {{data.1.quantity}}
+          <form method='POST' action='/cart/minusone'>
+            <input type='hidden' name='id' value={{data.1.id}} />
+            <button type='submit' class='btn-minus'>-</button></form>
+
+        </div>
+        <div class='cart-price'>${{data.1.price}}</div>
+        <div class='cart-total'>${{data.1.total}}</div>
+        <div class='cart-removeitem'>
+          <form method='POST' action='/cart/removeitem'>
+            <input type='hidden' name='id' value={{data.1.id}} />
+            <button type='submit' class='cart-remove-item'>Remove Item
+            </button>
+          </form>
+        </div>
+      </div>
+    {{/if}}
+
+    {{#if data.2.title}}
+      <div class='grid-container cart'>
+
+        <img onmouseover='scaleImg(this)' onmouseout='staticImg(this)' class='cart-img' src={{data.2.image}} />
+        <div class='cart-title'>{{data.2.title}}</div>
+        <div class='cart-quantity'>
+          <form method='POST' action='/cart/updateone'>
+            <input type='hidden' name='id' value={{data.2.id}} />
+            <button type='submit' class='btn-plus'>+</button></form>
+          {{data.2.quantity}}
+          <form method='POST' action='/cart/minusone'>
+            <input type='hidden' name='id' value={{data.2.id}} />
+            <button type='submit' class='btn-minus'>-</button></form>
+
+        </div>
+        <div class='cart-price'>${{data.2.price}}</div>
+        <div class='cart-total'>${{data.2.total}}</div>
+        <div class='cart-removeitem'>
+          <form method='POST' action='/cart/removeitem'>
+            <input type='hidden' name='id' value={{data.2.id}} />
+            <button type='submit' class='cart-remove-item'>Remove Item
+            </button>
+          </form>
+        </div>
+      </div>
+    {{/if}}
+
+    {{#if data.3.title}}
+      <div class='grid-container cart'>
+
+        <img onmouseover='scaleImg(this)' onmouseout='staticImg(this)' class='cart-img' src={{data.3.image}} />
+        <div class='cart-title'>{{data.3.title}}</div>
+        <div class='cart-quantity'>
+          <form method='POST' action='/cart/updateone'>
+            <input type='hidden' name='id' value={{data.3.id}} />
+            <button type='submit' class='btn-plus'>+</button></form>
+          {{data.3.quantity}}
+          <form method='POST' action='/cart/minusone'>
+            <input type='hidden' name='id' value={{data.3.id}} />
+            <button type='submit' class='btn-minus'>-</button></form>
+
+        </div>
+        <div class='cart-price'>${{data.3.price}}</div>
+        <div class='cart-total'>${{data.3.total}}</div>
+        <div class='cart-removeitem'>
+          <form method='POST' action='/cart/removeitem'>
+            <input type='hidden' name='id' value={{data.3.id}} />
+            <button type='submit' class='cart-remove-item'>Remove Item
+            </button>
+          </form>
+        </div>
+      </div>
+    {{/if}}
+
+    {{#if data.4.title}}
+      <div class='grid-container cart'>
+
+        <img onmouseover='scaleImg(this)' onmouseout='staticImg(this)' class='cart-img' src={{data.4.image}} />
+        <div class='cart-title'>{{data.4.title}}</div>
+        <div class='cart-quantity'>
+          <form method='POST' action='/cart/updateone'>
+            <input type='hidden' name='id' value={{data.4.id}} />
+            <button type='submit' class='btn-plus'>+</button></form>
+          {{data.4.quantity}}
+          <form method='POST' action='/cart/minusone'>
+            <input type='hidden' name='id' value={{data.4.id}} />
+            <button type='submit' class='btn-minus'>-</button></form>
+
+        </div>
+        <div class='cart-price'>${{data.4.price}}</div>
+        <div class='cart-total'>${{data.4.total}}</div>
+        <div class='cart-removeitem'>
+          <form method='POST' action='/cart/removeitem'>
+            <input type='hidden' name='id' value={{data.4.id}} />
+            <button type='submit' class='cart-remove-item'>Remove Item
+            </button>
+          </form>
+        </div>
+      </div>
+    {{/if}}
+
+    {{#if data.5.title}}
+      <div class='grid-container cart'>
+
+        <img onmouseover='scaleImg(this)' onmouseout='staticImg(this)' class='cart-img' src={{data.5.image}} />
+        <div class='cart-title'>{{data.5.title}}</div>
+        <div class='cart-quantity'>
+          <form method='POST' action='/cart/updateone'>
+            <input type='hidden' name='id' value={{data.5.id}} />
+            <button type='submit' class='btn-plus'>+</button></form>
+          {{data.5.quantity}}
+          <form method='POST' action='/cart/minusone'>
+            <input type='hidden' name='id' value={{data.5.id}} />
+            <button type='submit' class='btn-minus'>-</button></form>
+
+        </div>
+        <div class='cart-price'>${{data.5.price}}</div>
+        <div class='cart-total'>${{data.5.total}}</div>
+        <div class='cart-removeitem'>
+          <form method='POST' action='/cart/removeitem'>
+            <input type='hidden' name='id' value={{data.5.id}} />
+            <button type='submit' class='cart-remove-item'>Remove Item
+            </button>
+          </form>
+        </div>
+      </div>
+    {{/if}}
+
+    {{#if data.6.title}}
+      <div class='grid-container cart'>
+
+        <img onmouseover='scaleImg(this)' onmouseout='staticImg(this)' class='cart-img' src={{data.6.image}} />
+        <div class='cart-title'>{{data.6.title}}</div>
+        <div class='cart-quantity'>
+          <form method='POST' action='/cart/updateone'>
+            <input type='hidden' name='id' value={{data.6.id}} />
+            <button type='submit' class='btn-plus'>+</button></form>
+          {{data.6.quantity}}
+          <form method='POST' action='/cart/minusone'>
+            <input type='hidden' name='id' value={{data.6.id}} />
+            <button type='submit' class='btn-minus'>-</button></form>
+
+        </div>
+        <div class='cart-price'>${{data.6.price}}</div>
+        <div class='cart-total'>${{data.6.total}}</div>
+        <div class='cart-removeitem'>
+          <form method='POST' action='/cart/removeitem'>
+            <input type='hidden' name='id' value={{data.6.id}} />
+            <button type='submit' class='cart-remove-item'>Remove Item
+            </button>
+          </form>
+        </div>
+      </div>
+    {{/if}}
+
+    {{#if data.7.title}}
+      <div class='grid-container cart'>
+
+        <img onmouseover='scaleImg(this)' onmouseout='staticImg(this)' class='cart-img' src={{data.7.image}} />
+        <div class='cart-title'>{{data.7.title}}</div>
+        <div class='cart-quantity'>
+          <form method='POST' action='/cart/updateone'>
+            <input type='hidden' name='id' value={{data.7.id}} />
+            <button type='submit' class='btn-plus'>+</button></form>
+          {{data.7.quantity}}
+          <form method='POST' action='/cart/minusone'>
+            <input type='hidden' name='id' value={{data.7.id}} />
+            <button type='submit' class='btn-minus'>-</button></form>
+
+        </div>
+        <div class='cart-price'>${{data.7.price}}</div>
+        <div class='cart-total'>${{data.7.total}}</div>
+        <div class='cart-removeitem'>
+          <form method='POST' action='/cart/removeitem'>
+            <input type='hidden' name='id' value={{data.7.id}} />
+            <button type='submit' class='cart-remove-item'>Remove Item
+            </button>
+          </form>
+        </div>
+      </div>
+    {{/if}}
+
+    {{#if data.8.title}}
+      <div class='grid-container cart'>
+
+        <img onmouseover='scaleImg(this)' onmouseout='staticImg(this)' class='cart-img' src={{data.8.image}} />
+        <div class='cart-title'>{{data.8.title}}</div>
+        <div class='cart-quantity'>
+          <form method='POST' action='/cart/updateone'>
+            <input type='hidden' name='id' value={{data.8.id}} />
+            <button type='submit' class='btn-plus'>+</button></form>
+          {{data.8.quantity}}
+          <form method='POST' action='/cart/minusone'>
+            <input type='hidden' name='id' value={{data.8.id}} />
+            <button type='submit' class='btn-minus'>-</button></form>
+
+        </div>
+        <div class='cart-price'>${{data.8.price}}</div>
+        <div class='cart-total'>${{data.8.total}}</div>
+        <div class='cart-removeitem'>
+          <form method='POST' action='/cart/removeitem'>
+            <input type='hidden' name='id' value={{data.8.id}} />
+            <button type='submit' class='cart-remove-item'>Remove Item
+            </button>
+          </form>
+        </div>
+      </div>
+    {{/if}}
+
+    {{#if data.9.title}}
+      <div class='grid-container cart'>
+
+        <img onmouseover='scaleImg(this)' onmouseout='staticImg(this)' class='cart-img' src={{data.9.image}} />
+        <div class='cart-title'>{{data.9.title}}</div>
+        <div class='cart-quantity'>
+          <form method='POST' action='/cart/updateone'>
+            <input type='hidden' name='id' value={{data.9.id}} />
+            <button type='submit' class='btn-plus'>+</button></form>
+          {{data.9.quantity}}
+          <form method='POST' action='/cart/minusone'>
+            <input type='hidden' name='id' value={{data.9.id}} />
+            <button type='submit' class='btn-minus'>-</button></form>
+
+        </div>
+        <div class='cart-price'>${{data.9.price}}</div>
+        <div class='cart-total'>${{data.9.total}}</div>
+        <div class='cart-removeitem'>
+          <form method='POST' action='/cart/removeitem'>
+            <input type='hidden' name='id' value={{data.9.id}} />
+            <button type='submit' class='cart-remove-item'>Remove Item
+            </button>
+          </form>
+        </div>
+      </div>
+    {{/if}}
+
+    <p class='noitems-cart'><h2>{{noitems}}</h2></p>
+    {{#each subtotal}}
+      <div class='total-amount'>
+        Sub-Total: ${{this}}
+      </div>
+    {{/each}}
+
+    <a href='/payment'>
+      <button class='checkout-btn'>Checkout
+      </button></a>
+  </div>
+
+</div>

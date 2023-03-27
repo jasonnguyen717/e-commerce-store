@@ -1,0 +1,86 @@
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../images/icons/logo.ico">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>{{title}}
+    </title>
+    <script defer src="../js/script.js">
+    </script>
+</head>
+      <div class="flexbox-container header">
+         <div class="flexbox-item header-1">
+            <a href="/index">
+            <img width="200" height="60" alt="Company Logo. Directs to home page" src="../images/vmjj-white.png">
+            </a>
+         </div>
+         <div class="flexbox-item header-2">
+            <input type="text" id="searchbar">
+            <a class="searchicon" href="/index">
+            <img width="25" height="25" alt="Search button" src="../images/search.png">
+            </a>
+         </div>
+         <div class="flexbox-container nav">
+            <div class="flexbox-item header-3">
+               <a class="navbar" href="/QnA">QnA </a>
+            </div>
+            <div class="flexbox-item header-4">
+               <a class="navbar" href="/about">About </a>
+            </div>
+            <div class="flexbox-item header-5">
+               <a class="navbar" href="/signin">Login</a>
+            </div>
+            <div class="flexbox-item header-6">
+               <a class="navbar" href="/register">Register</a>
+            </div>
+            <div class="flexbox-item header-7">
+               <a class="navbar" href="/cart"><img class="img-cart" alt="Cart button" src="../images/cart.png"></a>
+            </div>
+         </div>
+      </div>
+      <div class="addmessage">{{message}}</div>
+      <div class="index-container">
+         <div class="topnav">
+            <a class="active">Navigation</a>
+            <div id="myLinks2">
+               <a href="/categories/mice">Computer Mice</a>
+			   <a href="/categories/mousepads" class="category-highlight">Mousepads</a>
+               <a href="/categories/headphones" >Headphones / Headsets</a>
+               <a href="/categories/keyboards">Computer Keyboards</a>
+               <a href="/categories/monitors">Computer Monitors</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction2()">
+            <img src="../images/hamburger.png" width="22px" height="22px" alt="open navigation menu button"></i>
+            </a>
+         </div>
+         <div class="index-items">
+            <div class="category-item">
+               <div class="category-column1">
+                  <img width="200" height="183" alt="KTRIO Large Gaming Mouse Pad" src="../images/products/KTRIO_Large_Gaming_Mouse_Pad.jpg">
+               </div>
+               <div class="category-column2">
+                  KTRIO Large Gaming Mouse Pad<br>Price: $11<br><br>
+                  <form method="POST" action ="/categories/mousepads">
+                  <input type="hidden" name="prod" value="3">
+                  <button class="category-button" type="submit">Add to cart</button>
+                  </form>
+               </div>
+            </div>
+            <div class="category-item">
+               <div class="category-column1">
+                  <img width="200" height="183" alt="Logitech G640 Cloth Gaming Mouse Pad" src="../images/products/Logitech_G640_Cloth_Gaming_Mouse_Pad.jpg">
+               </div>
+               <div class="category-column2">
+                  Logitech G640 Cloth Mouse Pad<br>Price: $20<br><br>
+                  <form method="POST" action ="/categories/mousepads">
+                  <input type="hidden" name="prod" value="4">
+                  <button class="category-button" type="submit">Add to cart</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <footer>
+         © 2022-2022, VMJJ, Inc.
+      </footer>
+   </body>
+</html>

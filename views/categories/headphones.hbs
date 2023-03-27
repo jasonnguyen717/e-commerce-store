@@ -1,0 +1,83 @@
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../images/icons/logo.ico">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>{{title}}
+    </title>
+    <script defer src="../js/script.js">
+    </script>
+</head>
+
+      <div class="flexbox-container header">
+         <div class="flexbox-item header-1">
+            <a href="/index">
+            <img width="200" height="60" alt="Company Logo. Directs to home page" src="../images/vmjj-white.png">
+            </a>
+         </div>
+         <div class="flexbox-item header-2">
+            <input type="text" id="searchbar">
+            <a class="searchicon" href="/index">
+            <img width="25" height="25" alt="Search button" src="../images/search.png">
+            </a>
+         </div>
+         <div class="flexbox-container nav">
+            <div class="flexbox-item header-3">
+               <a class="navbar" href="/QnA">QnA </a>
+            </div>
+            <div class="flexbox-item header-4">
+               <a class="navbar" href="/about">About </a>
+            </div>
+            <div class="flexbox-item header-5">
+               <a class="navbar" href="/signin">Login</a>
+            </div>
+            <div class="flexbox-item header-6">
+               <a class="navbar" href="/register">Register</a>
+            </div>
+            <div class="flexbox-item header-7">
+               <a class="navbar" href="/cart"><img class="img-cart" alt="Cart button" src="../images/cart.png"></a>
+            </div>
+         </div>
+      </div>
+      <div class="addmessage">{{message}}</div>
+      <div class="index-container">
+         <div class="topnav">
+            <a class="active">Navigation</a>
+            <div id="myLinks2">
+               <a href="/categories/mice">Computer Mice</a>
+			   <a href="/categories/mousepads">Mousepads</a>
+               <a href="/categories/headphones" class="category-highlight">Headphones / Headsets</a>
+               <a href="/categories/keyboards">Computer Keyboards</a>
+               <a href="/categories/monitors">Computer Monitors</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction2()">
+            <img src="../images/hamburger.png" width="22px" height="22px" alt="open navigation menu button"></i>
+            </a>
+         </div>
+         <div class="index-items">
+            <div class="category-item">
+               <div class="category-column1">
+                  <img width="200" height="183" alt="Razer BlackShark V2 Pro Wireless" src="../images/products/Razer_BlackShark_V2_Pro_Wireless.jpg">
+               </div>
+               <div class="category-column2">
+                  Razer BlackShark V2 Pro Wireless<br>Price: $75<br><br>
+                  <form method="POST" action ="/categories/headphones">
+                  <input type="hidden" name="prod" value="5">
+                  <button class="category-button" type="submit">Add to cart</button>
+               </form> 
+               </div>
+            </div>
+            <div class="category-item">
+               <div class="category-column1">
+                  <img width="200" height="183" alt="HyperX Cloud Alpha Wireless" src="../images/products/HyperX_Cloud_Alpha_Wireless.jpg">
+               </div>
+               <div class="category-column2">
+                  HyperX Cloud Alpha Wireless<br>Price: $140<br><br>
+                  <form method="POST" action ="/categories/headphones">
+                  <input type="hidden" name="prod" value="6">
+                 <button class="category-button" name="6" type="submit">Add to cart</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+  {{> footer}}

@@ -1,0 +1,70 @@
+{{> header}}
+{{> navbar}}
+
+<div class='signin-container' id='signin-container'>
+  <form class='register-form' id='sign-form' action='/signin' method='POST'>
+    <div class='item1-reg'>
+      <button class='inandout-btn'>
+        <h1 class='register-h1 inandout'>Sign in
+        </h1>
+      </button>
+      <hr class='hr-signin' />
+      <ul class='error-message'>
+        {{messages.error}}
+        {{message}}
+        {{signedout}}
+      </ul>
+    </div>
+    <br />
+    <div class='signin-resetpass-text' id='signin-resetpass-text'>Success. Please check your email to reset your
+      password.
+    </div>
+    <div>
+      <input
+        class='signin-field'
+        type='text'
+        name='username'
+        id='user'
+        autofocus
+        required
+        placeholder='Username / Email'
+      />
+      <input class='signin-field' type='password' name='password' id='pass' required placeholder='Password' />
+    </div>
+    <a href='javascript:void(0);' onclick='swapSignIn()' id='forgotdec'>Forgot your password?</a>
+    <div class='remember-me'>
+      <input class='remember-padding' type='checkbox' id='rememberMe' />
+      <label for='rememberMe'>Remember me</label>
+    </div>
+    <button class='signin-button' type='submit'>Sign in</button>
+
+    <div class='signin-register'>
+      New to VMJJ?&nbsp;
+      <a class='signin-link' href='/register'>Register here</a>
+    </div>
+  </form>
+</div>
+
+<div class='signin-container' id='signin-resetpass'>
+  <form class='register-form' name='register-form '>
+    <div class='item1-reg'>
+      <h1 class='register-h1'>Enter your email:
+      </h1>
+    </div>
+    <br />
+    <div>
+      <input
+        class='signin-field'
+        type='email'
+        id='email-only'
+        name='email-only'
+        autofocus
+        required
+        placeholder='example@domain.com'
+      />
+    </div>
+    <button class='signin-button' type='submit' onclick='ValidateEmail()'>Reset</button>
+    <button class='signin-button-cancel' type='submit' onclick='cancelReset()'>Cancel</button>
+  </form>
+</div>
+{{> footer}}

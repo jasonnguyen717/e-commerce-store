@@ -1,0 +1,35 @@
+<div class='flexbox-container header'>
+  <div class='flexbox-item header-1'>
+    <a href='/index'>
+      <img width='200' height='60' alt='Company Logo. Directs to home page' src='images/vmjj-white.png' />
+    </a>
+    {{#if username}}
+    <ul>
+    <div class="logout">{{username}} {{> logout}}</div>
+    </ul>
+    {{/if}}
+  </div>
+  <div class='flexbox-item header-2'>
+    <input type='text' id='searchbar' />
+    <a class='searchicon' href='/index'>
+      <img width='25' height='25' alt='Search button' src='images/search.png' />
+    </a>
+  </div>
+  <div class='flexbox-container nav'>
+    <div class='flexbox-item header-3'>
+      <a class='navbar' href='/QnA'>QnA </a>
+    </div>
+    <div class='flexbox-item header-4'>
+      <a class='navbar' href='/about'>About </a>
+    </div>
+    <div class='flexbox-item header-5'>
+      <a class='navbar' href='/signin'>Login</a>
+    </div>
+    <div class='flexbox-item header-6'>
+      <a class='navbar' href='/register'>Register</a>
+    </div>
+    <div class='flexbox-item header-7'>
+      <a class='navbar' href='/cart'><img class='img-cart' alt='Cart button' src='images/cart.png' /></a>
+    </div>
+  </div>
+</div>
