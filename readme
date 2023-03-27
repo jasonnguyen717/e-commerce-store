@@ -1,0 +1,1 @@
+To get everything started, you need to install the PostgreSQL database, install all the dependency packages with npm install, change the .env information for the database that’s on your machine, create 3 tables (users, orders, and products) in your pg database, and run node app.js in terminal to start the application which defaults to port 3333 for localhost.
